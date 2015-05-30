@@ -15,6 +15,7 @@
 		9C45A9771B1050D200EE7BD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C45A9761B1050D200EE7BD0 /* Images.xcassets */; };
 		9C45A97A1B1050D200EE7BD0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C45A9781B1050D200EE7BD0 /* LaunchScreen.xib */; };
 		9C45A9861B1050D200EE7BD0 /* pongTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C45A9851B1050D200EE7BD0 /* pongTestTests.swift */; };
+		9C4D2B481B10F8FF00F75F30 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D2B471B10F8FF00F75F30 /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9C45A9661B1050D200EE7BD0 /* pongTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pongTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C45A9661B1050D200EE7BD0 /* fallingUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fallingUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C45A96A1B1050D200EE7BD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C45A96B1B1050D200EE7BD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C45A96D1B1050D200EE7BD0 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -37,9 +38,10 @@
 		9C45A9741B1050D200EE7BD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C45A9761B1050D200EE7BD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9C45A9791B1050D200EE7BD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9C45A97F1B1050D200EE7BD0 /* pongTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pongTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C45A97F1B1050D200EE7BD0 /* fallingUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fallingUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C45A9841B1050D200EE7BD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C45A9851B1050D200EE7BD0 /* pongTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pongTestTests.swift; sourceTree = "<group>"; };
+		9C4D2B471B10F8FF00F75F30 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +74,8 @@
 		9C45A9671B1050D200EE7BD0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C45A9661B1050D200EE7BD0 /* pongTest.app */,
-				9C45A97F1B1050D200EE7BD0 /* pongTestTests.xctest */,
+				9C45A9661B1050D200EE7BD0 /* fallingUp.app */,
+				9C45A97F1B1050D200EE7BD0 /* fallingUpTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +86,7 @@
 				9C45A96B1B1050D200EE7BD0 /* AppDelegate.swift */,
 				9C45A96D1B1050D200EE7BD0 /* GameScene.sks */,
 				9C45A96F1B1050D200EE7BD0 /* GameScene.swift */,
+				9C4D2B471B10F8FF00F75F30 /* GameOverScene.swift */,
 				9C45A9711B1050D200EE7BD0 /* GameViewController.swift */,
 				9C45A9731B1050D200EE7BD0 /* Main.storyboard */,
 				9C45A9761B1050D200EE7BD0 /* Images.xcassets */,
@@ -121,9 +124,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C45A9651B1050D200EE7BD0 /* pongTest */ = {
+		9C45A9651B1050D200EE7BD0 /* fallingUp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C45A9891B1050D200EE7BD0 /* Build configuration list for PBXNativeTarget "pongTest" */;
+			buildConfigurationList = 9C45A9891B1050D200EE7BD0 /* Build configuration list for PBXNativeTarget "fallingUp" */;
 			buildPhases = (
 				9C45A9621B1050D200EE7BD0 /* Sources */,
 				9C45A9631B1050D200EE7BD0 /* Frameworks */,
@@ -133,14 +136,14 @@
 			);
 			dependencies = (
 			);
-			name = pongTest;
+			name = fallingUp;
 			productName = pongTest;
-			productReference = 9C45A9661B1050D200EE7BD0 /* pongTest.app */;
+			productReference = 9C45A9661B1050D200EE7BD0 /* fallingUp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9C45A97E1B1050D200EE7BD0 /* pongTestTests */ = {
+		9C45A97E1B1050D200EE7BD0 /* fallingUpTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C45A98C1B1050D200EE7BD0 /* Build configuration list for PBXNativeTarget "pongTestTests" */;
+			buildConfigurationList = 9C45A98C1B1050D200EE7BD0 /* Build configuration list for PBXNativeTarget "fallingUpTests" */;
 			buildPhases = (
 				9C45A97B1B1050D200EE7BD0 /* Sources */,
 				9C45A97C1B1050D200EE7BD0 /* Frameworks */,
@@ -151,9 +154,9 @@
 			dependencies = (
 				9C45A9811B1050D200EE7BD0 /* PBXTargetDependency */,
 			);
-			name = pongTestTests;
+			name = fallingUpTests;
 			productName = pongTestTests;
-			productReference = 9C45A97F1B1050D200EE7BD0 /* pongTestTests.xctest */;
+			productReference = 9C45A97F1B1050D200EE7BD0 /* fallingUpTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -167,6 +170,7 @@
 				TargetAttributes = {
 					9C45A9651B1050D200EE7BD0 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = G66X828SB7;
 					};
 					9C45A97E1B1050D200EE7BD0 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -174,7 +178,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9C45A9611B1050D200EE7BD0 /* Build configuration list for PBXProject "pongTest" */;
+			buildConfigurationList = 9C45A9611B1050D200EE7BD0 /* Build configuration list for PBXProject "fallingUp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -187,8 +191,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C45A9651B1050D200EE7BD0 /* pongTest */,
-				9C45A97E1B1050D200EE7BD0 /* pongTestTests */,
+				9C45A9651B1050D200EE7BD0 /* fallingUp */,
+				9C45A97E1B1050D200EE7BD0 /* fallingUpTests */,
 			);
 		};
 /* End PBXProject section */
@@ -221,6 +225,7 @@
 			files = (
 				9C45A9701B1050D200EE7BD0 /* GameScene.swift in Sources */,
 				9C45A9721B1050D200EE7BD0 /* GameViewController.swift in Sources */,
+				9C4D2B481B10F8FF00F75F30 /* GameOverScene.swift in Sources */,
 				9C45A96C1B1050D200EE7BD0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,7 +243,7 @@
 /* Begin PBXTargetDependency section */
 		9C45A9811B1050D200EE7BD0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9C45A9651B1050D200EE7BD0 /* pongTest */;
+			target = 9C45A9651B1050D200EE7BD0 /* fallingUp */;
 			targetProxy = 9C45A9801B1050D200EE7BD0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -348,9 +353,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = pongTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = fallingUp;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -358,9 +366,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = pongTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = fallingUp;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -378,7 +389,7 @@
 				);
 				INFOPLIST_FILE = pongTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = fallingUpTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pongTest.app/pongTest";
 			};
 			name = Debug;
@@ -393,7 +404,7 @@
 				);
 				INFOPLIST_FILE = pongTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = fallingUpTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pongTest.app/pongTest";
 			};
 			name = Release;
@@ -401,7 +412,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C45A9611B1050D200EE7BD0 /* Build configuration list for PBXProject "pongTest" */ = {
+		9C45A9611B1050D200EE7BD0 /* Build configuration list for PBXProject "fallingUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C45A9871B1050D200EE7BD0 /* Debug */,
@@ -410,21 +421,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C45A9891B1050D200EE7BD0 /* Build configuration list for PBXNativeTarget "pongTest" */ = {
+		9C45A9891B1050D200EE7BD0 /* Build configuration list for PBXNativeTarget "fallingUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C45A98A1B1050D200EE7BD0 /* Debug */,
 				9C45A98B1B1050D200EE7BD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		9C45A98C1B1050D200EE7BD0 /* Build configuration list for PBXNativeTarget "pongTestTests" */ = {
+		9C45A98C1B1050D200EE7BD0 /* Build configuration list for PBXNativeTarget "fallingUpTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C45A98D1B1050D200EE7BD0 /* Debug */,
 				9C45A98E1B1050D200EE7BD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

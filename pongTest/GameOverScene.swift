@@ -67,7 +67,7 @@ class GameOverScene: SKScene {
         label.fontColor = SKColor.blackColor()
         label.position = CGPoint(x: size.width/2, y: size.height/2 + 200)
         addChild(label)
-        
+
         let playerScoreLabel = SKLabelNode(fontNamed: "Chalkduster")
         playerScoreLabel.text = "Your score: " + String(playerScore)
         playerScoreLabel.fontSize = 20
@@ -82,7 +82,7 @@ class GameOverScene: SKScene {
         
         let promptLabel = SKLabelNode(fontNamed: "AppleSDGothicNeo-Bold")
         promptLabel.text = "Touch anywhere to play again..."
-        promptLabel.fontSize = 25
+        promptLabel.fontSize = 20
         promptLabel.position = CGPointMake(size.width/2, 200)
         promptLabel.fontColor = SKColor.blackColor()
         addChild(promptLabel)

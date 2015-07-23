@@ -16,9 +16,8 @@ class GameViewController: UIViewController {
         let skView = view as! SKView
         scene.backgroundColor = UIColor.blueColor()
         scene.scaleMode = .ResizeFill
+        
         skView.ignoresSiblingOrder = true
-        skView.showsFPS = true
-        skView.showsNodeCount = true
         skView.presentScene(scene)
     }
     

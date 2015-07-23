@@ -20,6 +20,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var ball: SKSpriteNode!
     var screen: SKSpriteNode!
     var player: SKSpriteNode!
+    var wallSpeed: CGFloat = 20
     var xVelocity: CGFloat = 200
     var yVelocity: CGFloat = 200
     var brickWallFrequency: CFTimeInterval = 0.8 // How often to create the wall
@@ -97,13 +98,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if startTime == 0.0 { startTime = currentTime }
         if lastTime == 0.0 { lastTime = currentTime }
         
+        // Work around for background process
+        if currentTime - lastTime > 1 {
+            let reveal = SKTransition.flipHorizontalWithDuration(0.5)
+            let gameOverScene = GameOverScene(size: self.size, score: score)
+            self.view?.presentScene(gameOverScene, transition: reveal)
+        }
+        
         ball.physicsBody?.velocity = CGVector(dx:0.0,dy:yVelocity)
         if lastTime + brickWallFrequency < currentTime {
             createBrickWall()
             lastTime = currentTime
         }
         
-        if brickWallFrequency > 0.35 {
+        if brickWallFrequency > 0.20 {
+            brickWallFrequency = brickWallFrequency - 0.0005
+        }
+        else if (currentTime - startTime) > 30 && brickWallFrequency > 0.05{
             brickWallFrequency = brickWallFrequency - 0.0005
         }
         
@@ -121,6 +132,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
             })
+        /*
+        self.enumerateChildNodesWithName("Wall", usingBlock: {node, stop in
+            if let wall: SKSpriteNode = node as? SKSpriteNode {
+                // wall.position = CGPointMake(wall.position.x, wall.position.y-self.wallSpeed)
+                wall.runAction(SKAction.moveByX(0, y: -self.wallSpeed, duration: 0))
+            }
+        })
+        */
         
     }
     
@@ -156,28 +175,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
        
         let gapSize : CGFloat = ball.size.width+10
         let gapLocation: CGFloat = CGFloat(random() % Int(self.size.width - gapSize))
-        let downAction = SKAction.moveByX(0.0, y: -(self.size.height+50), duration: 5.0)
-        
         let wallTexture = SKTexture(imageNamed: "wallTexture")
+        let downAction: SKAction = SKAction.moveByX(0, y: -self.size.height, duration: 1.5)
         
         let leftWall = SKSpriteNode(texture: wallTexture , size: CGSizeMake(gapLocation, 25.0))
+        leftWall.name = "Wall"
         leftWall.anchorPoint = CGPointMake(0, 0)
         leftWall.position = CGPointMake(0,self.size.height+20)
         leftWall.physicsBody = SKPhysicsBody(rectangleOfSize: leftWall.size, center: CGPointMake(leftWall.size.width/2, leftWall.size.height/2))
         leftWall.physicsBody?.categoryBitMask = PhysicsCategory.Brick
         leftWall.physicsBody?.contactTestBitMask = PhysicsCategory.Ball
         leftWall.physicsBody?.collisionBitMask = PhysicsCategory.None
-        leftWall.runAction(SKAction.sequence([downAction, SKAction.removeFromParent()]))
+        leftWall.runAction(SKAction.sequence([downAction,SKAction.removeFromParent()]))
         self.addChild(leftWall)
         
         let rightWall = SKSpriteNode(texture: wallTexture, size: CGSizeMake(self.size.width - gapLocation - gapSize, 25.0))
+        rightWall.name = "Wall"
         rightWall.anchorPoint = CGPointMake(0, 0)
         rightWall.position = CGPointMake(gapLocation+gapSize,self.size.height+20)
         rightWall.physicsBody = SKPhysicsBody(rectangleOfSize: rightWall.size, center: CGPointMake(rightWall.size.width/2, rightWall.size.height/2))
         rightWall.physicsBody?.categoryBitMask = PhysicsCategory.Brick
         rightWall.physicsBody?.contactTestBitMask = PhysicsCategory.Ball
         rightWall.physicsBody?.collisionBitMask = PhysicsCategory.None
-        rightWall.runAction(SKAction.sequence([downAction, SKAction.removeFromParent()]))
+        rightWall.runAction(SKAction.sequence([downAction,SKAction.removeFromParent()]))
         self.addChild(rightWall)
     
     }
